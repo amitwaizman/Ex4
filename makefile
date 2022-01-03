@@ -12,7 +12,7 @@ graph.o: graph.c graph.h
 	$(CC) $(FLAGS) -c graph.c 
 
 graphProg: main.o libmygraph.a
-	$(CC) $(FLAGS) -o graphProg main.o libmygraph.a
+	$(CC) $(FLAGS) -o graphProg main.o libmygraph.a -lm
 
 main.o: main.c graph.h
 	$(CC) $(FLAGS) -c main.c
