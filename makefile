@@ -9,7 +9,7 @@ libmygraph.a:graph.o
 	$(AR) -rcs libmygraph.a graph.o 
 
 graph.o: graph.c graph.h
-	$(CC) $(FLAGS) -c graph.c 
+	$(CC) $(FLAGS) -c graph.c -lm
 
 graphProg: main.o libmygraph.a
 	$(CC) $(FLAGS) -o graphProg main.o libmygraph.a -lm
